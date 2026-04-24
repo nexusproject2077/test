@@ -1133,6 +1133,100 @@ a {
   transform: scale(1.05);
 }
 
+/* Project cards with media preview (image / video) */
+.project-card--media {
+  padding: 0;
+}
+
+.project-card__media-link {
+  display: block;
+  text-decoration: none;
+}
+
+.project-card__media {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+  aspect-ratio: 16 / 9;
+  background: var(--clr-bg);
+}
+
+.project-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.project-card--media:hover .project-card__media img {
+  transform: scale(1.05);
+}
+
+.project-card__media-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.project-card__media-link:hover .project-card__media-overlay {
+  opacity: 1;
+}
+
+.project-card__media-overlay svg {
+  stroke: var(--clr-accent-cyan);
+  filter: drop-shadow(0 0 10px var(--clr-accent-cyan));
+}
+
+.project-card__media-overlay span {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--clr-accent-cyan);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.project-card__media--video {
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  background: #000;
+  aspect-ratio: 16 / 9;
+}
+
+.project-card__media--video video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.project-card__content {
+  padding: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.project-card__badge {
+  display: inline-block;
+  padding: 0.3rem 0.85rem;
+  border-radius: 8px;
+  background: rgba(176, 38, 255, 0.12);
+  color: var(--clr-accent-purple);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid rgba(176, 38, 255, 0.3);
+  margin-bottom: 1rem;
+}
+
 /* ------------------------------
    About
 ------------------------------ */
