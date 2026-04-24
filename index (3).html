@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="Portfolio de Meric Koken — Développeur full-stack Junior. Découvrez mes projets, compétences et expériences en développement web." />
+  <meta name="keywords" content="développeur, full-stack, React, Node.js, TypeScript, portfolio" />
+  <meta name="author" content="Meric Koken" />
+  <meta property="og:title" content="Meric Koken — Développeur Full-Stack Junior" />
+  <meta property="og:description"
+    content="Portfolio de Meric Koken — Développeur full-stack Junior. Découvrez mes projets, compétences et expériences en développement web." />
+  <meta property="og:type" content="website" />
+  <title>Meric Koken — Développeur Full-Stack Junior</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-content">
+      <div class="loading-logo">
+        <span class="brand__mark">
+        </span>
+        <span>
+          <span><</span>
+            <span class="brand__glow">M
+            </span>/>
+        </span>
+      </div>
+      <div class="loading-bar">
+        <div class="loading-progress"></div>
+      </div>
+      <p class="loading-text">Chargement...</p>
+    </div>
+  </div>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress">
+    <div class="scroll-progress-bar"></div>
+  </div>
+
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+
+
+  <canvas id="particles"></canvas>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="#home" class="brand" aria-label="Accueil">
+        <span class="brand__mark">&lt;<span class="brand__glow">M</span>/&gt;</span>
+      </a>
+      <nav class="site-nav" id="primaryNav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="#home">Accueil</a></li>
+          <li><a href="#skills">Compétences</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false"
+          aria-controls="primaryNav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Changer le thème">
+          <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path
+              d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12Zm0-14V2m0 20v-2m8-8h2M2 12h2m14.95 6.95 1.41 1.41M4.64 4.64 6.05 6.05m0 11.9-1.41 1.41m14.31-14.3-1.41 1.41" />
+          </svg>
+          <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M21 12.79A9 9 0 0 1 11.21 3 7 7 0 1 0 21 12.79Z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="section hero">
+      <div class="container">
+        <div class="hero__content">
+          <div class="hero__badge">
+            <span class="pulse"></span>
+            <span>Disponible pour travailler</span>
+          </div>
+          <p class="hero__greeting">
+            <span class="typing-text" data-text="Bonjour, je suis"></span>
+          </p>
+          <h1 class="hero__name">
+            <span class="gradient-text">Meric Koken</span>
+          </h1>
+          <div class="hero__title-wrapper">
+            <p class="hero__title typing-text" data-text="Développeur Full-Stack Junior"></p>
+          </div>
+          <p class="hero__description">
+            Je développe des <span class="highlight">applications web modernes</span> <br>avec HTML, PHP.
+            Passionné par <br>l'<span class="highlight">architecture logicielle</span>, <br>la performance et le code
+            propre.
+          </p>
+          <div class="hero__links">
+            <a href="https://github.com/mericdev-design" target="_blank" rel="noreferrer" class="btn btn--primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+              </svg>
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/meric-koken-444b10281/" target="_blank" rel="noreferrer"
+              class="btn btn--outline">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+              LinkedIn
+            </a>
+            <a href="mailto:merickoken54@gmail.com" class="btn btn--outline">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              Email
+            </a>
+          </div>
+        </div>
+        <div class="about__code">
+          <div class="code-block">
+            <div class="code-block__header">
+              <span class="code-block__dot"></span>
+              <span class="code-block__dot"></span>
+              <span class="code-block__dot"></span>
+              <span class="code-block__title">terminal.ts</span>
+            </div>
+            <pre><code><span class="keyword">const</span> <span class="variable">about</span> = {
+          <span class="property">name</span>: <span class="string">'Meric Koken'</span>,
+          <span class="property">role</span>: <span class="string">'Dev Full-Stack</span>
+          <span class="string">          Junior'</span>,
+          <span class="property">skills</span>: [
+            <span class="string">'PHP'</span>,
+            <span class="string">'JavaScript'</span>,
+            <span class="string">'JavaScript'</span>,
+            <span class="string">'HTML'</span>,
+            <span class="string">'CSS'</span>,
+            <span class="string">'Symfony'</span>
+          ],
+          <span class="property">passion</span>: <span class="string">'Code,</span>
+          <span class="string">CyberSécurité'</span>
+        };</code></pre>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__number">01</span>
+          <h2 class="section__title">
+            <span class="gradient-text">Compétences</span>
+          </h2>
+          <p class="section__description">
+            Les technologies et outils que j’utilise pour créer, développer et designer mes projets.
+          </p>
+        </div>
+        <div class="skills__grid">
+          <div class="skill-card" data-skill="frontend">
+            <div class="skill-card__icon">⚛️</div>
+            <h3>Frontend</h3>
+            <div class="skill-logos">
+              <div class="skill-logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"
+                  title="HTML5">
+                <span>HTML</span>
+              </div>
+              <div class="skill-logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"
+                  title="CSS3">
+                <span>CSS</span>
+              </div>
+              <div class="skill-logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                  alt="JavaScript" title="JavaScript">
+                <span>JavaScript</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-card" data-skill="backend">
+            <div class="skill-card__icon">⚙️</div>
+            <h3>Backend</h3>
+            <div class="skill-logos">
+              <div class="skill-logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"
+                  title="PHP">
+                <span>PHP</span>
+              </div>
+              <div class="skill-logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg" alt="Symfony"
+                  title="Symfony">
+                <span>Symfony</span>
+              </div>
+              <div class="skill-logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg"
+                  alt="WordPress" title="WordPress">
+                <span>WordPress</span>
+              </div>
+              <div class="skill-logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"
+                  title="Node.js">
+                <span>Node.js</span>
+              </div>
+              <div class="skill-logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"
+                  title="MongoDB">
+                <span>MongoDB</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-card" data-skill="tools">
+            <div class="skill-card__icon">🛠️</div>
+            <h3>Tools</h3>
+            <div class="skill-logos">
+              <div class="skill-logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux"
+                  title="Linux">
+                <span>Linux</span>
+              </div>
+              <div class="skill-logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg" alt="Ubuntu"
+                  title="Ubuntu">
+                <span>Ubuntu</span>
+              </div>
+              <div class="skill-logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"
+                  title="VS Code">
+                <span>VS Code</span>
+              </div>
+              <div class="skill-logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/phpstorm/phpstorm-plain.svg" alt="PHPStorm"
+                  title="PHPStorm">
+                <span>PHPStorm</span>
+              </div>
+              <div class="skill-logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"
+                  title="Git">
+                <span>Git</span>
+              </div>
+              <div class="skill-logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"
+                  title="Docker">
+                <span>Docker</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-card" data-skill="design">
+            <div class="skill-card__icon">🎨</div>
+            <h3>Design</h3>
+            <div class="skill-logos">
+              <div class="skill-logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva"
+                  title="Canva">
+                <span>Canva</span>
+              </div>
+              <div class="skill-logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"
+                  title="Figma">
+                <span>Figma</span>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__number">02</span>
+          <h2 class="section__title">
+            <span class="gradient-text">Projets Phares</span>
+          </h2>
+        </div>
+        <div class="projects__grid">
+          <article class="project-card">
+            <div class="project-card__number">01</div>
+            <div class="project-card__header">
+              <h3>RHash – Cryptage & Décryptage Avancé</h3>
+              <div class="project-card__links">
+                <a href="https://github.com/mericdev-design/RHash" class="project-link" aria-label="Code source"
+                  target="_blank">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <p class="project-card__description">
+              RHash est un outil de cryptage et décryptage ultra-sécurisé reposant sur un système en dix étapes : double
+              hashing, renforcement du mot de passe, Argon2id, génération dynamique de clés, vérification d’intégrité
+              via HMAC, compression et encodage Base64
+            </p>
+
+            <ul class="project-card__tags">
+              <li>Python</li>
+              <li>AES-GCM</li>
+              <li>Argon2id</li>
+              <li>HMAC-SHA256</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__number">02</div>
+            <div class="project-card__header">
+              <!-- <h3>Masked – Partage de fichiers anonyme & éphémère</h3>
+              <div class="project-card__links">
+                <a href="https://masked.rKoken.fr" class="project-link" aria-label="Démo">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                      <polyline points="15 3 21 3 21 9"/>
+                      <line x1="10" y1="14" x2="21" y2="3"/>
+                    </svg>
+                  </a>
+              </div>
+            </div>
+
+            <p class="project-card__description">
+              Masked est une plateforme de partage de fichiers anonyme inspirée des services éphémères.
+              Les fichiers sont stockés hors du dossier public, accessibles uniquement via un lien masqué
+              et peuvent être automatiquement détruits après expiration temporelle ou après un unique
+              téléchargement (burn after read).
+            </p>
+
+            <ul class="project-card__tags">
+              <li>PHP</li>
+              <li>Apache</li>
+              <li>Anonymous Upload</li>
+              <li>Hidden Storage</li>
+              <li>Masked URLs</li>
+              <li>Burn After Read</li>
+              <li>Time-Based Expiration</li>
+              <li>Input Sanitization</li>
+              <li>MIME Type Validation</li>
+              <li>Direct Access Blocking</li>
+              <li>Hotlink Protection</li>
+              <li>Non-Public Files</li>
+            </ul>
+
+
+
+          </article> -->
+
+          <!-- <article class="project-card">
+              <div class="project-card__number">03</div>
+              <div class="project-card__header">
+                <h3>Bientot</h3>
+                <div class="project-card__links">
+                  <a href="#" class="project-link" aria-label="Code source">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <p class="project-card__description">
+               
+              </p>
+              <ul class="project-card__tags">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </article> -->
+
+          <!-- <article class="project-card">
+              <div class="project-card__number">04</div>
+              <div class="project-card__header">
+                <h3>Bientot</h3>
+                <div class="project-card__links">
+                  <a href="#" class="project-link" aria-label="Code source">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                    </svg>
+                  </a>
+                  <a href="#" class="project-link" aria-label="Démo">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                      <polyline points="15 3 21 3 21 9"/>
+                      <line x1="10" y1="14" x2="21" y2="3"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <p class="project-card__description">
+
+              </p>
+              <ul class="project-card__tags">
+                <li></li>
+                <li>.io</li>
+                <li></li>
+                <li></li>
+              </ul>
+            </article> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__number">03</span>
+          <h2 class="section__title">
+            <span class="gradient-text">À Propos de Moi</span>
+          </h2>
+        </div>
+        <div class="about__content">
+          <div class="about__text">
+            <p>
+              Développeur <span class="highlight">Full-Stack Junior</span>, animé par la recherche de
+              précision, de performance et de maîtrise technique. J’accorde une importance
+              particulière à l’architecture logicielle, à la sécurité et aux bonnes pratiques :
+              écrire un code <span class="highlight">propre et durable</span> est une discipline, pas une option.
+            </p>
+
+            <p>
+              J’aime analyser et résoudre des <span class="highlight">problèmes complexes</span>, optimiser
+              les performances et développer des projets complets du design au déploiement.
+              Aujourd’hui, je travaille principalement avec <span class="highlight">PHP</span> et
+              <span class="highlight">JavaScript</span>, et j’approfondis activement
+              <span class="highlight">Symfony</span> afin de renforcer mes compétences backend.
+            </p>
+
+
+            <p>
+              En dehors du développement, je me forme en continu : veille technique,
+              expérimentations, projets personnels, cybersécurité… Toujours en train
+              d’apprendre, de créer et d’explorer de nouvelles technologies.
+            </p>
+
+            <a href="cv/Meric Koken CV.pdf" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14,2 14,8 20,8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10,9 9,9 8,9"></polyline>
+              </svg>
+              Voir mon CV
+            </a>
+
+          </div>
+          <div class="about__code">
+            <div class="code-block">
+              <div class="code-block__header">
+                <span class="code-block__dot"></span>
+                <span class="code-block__dot"></span>
+                <span class="code-block__dot"></span>
+                <span class="code-block__title">about.ts</span>
+              </div>
+              <pre><code><span class="keyword">const</span> <span class="variable">about</span> = {
+  <span class="property">name</span>: <span class="string">'Meric Koken'</span>,
+ <span class="property">role</span>: <span class="string">'Dev Full-Stack</span>
+          <span class="string">          Junior'</span>,
+            <span class="property">location</span>: <span class="string">'Troyes, FR'</span>,
+  <span class="property">interests</span>: [
+    <span class="string">'Code Propre'</span>,
+    <span class="string">'Architecture Système'</span>,
+    <span class="string">'Open Source'</span>
+  ],
+  <span class="property">currentlyLearning</span>: <span class="string">'Symfony'</span>
+};</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__number">04</span>
+          <h2 class="section__title">
+            <span class="gradient-text">Me Contacter</span>
+          </h2>
+        </div>
+        <div class="about__text">
+          <p>
+            Vous avez un projet ou une question ? N'hésitez pas à me contacter.
+            Je suis toujours ouvert aux nouvelles opportunités et collaborations intéressantes.
+          </p>
+          <p>
+            Que ce soit pour discuter d'un projet, échanger sur les technologies,
+            ou simplement dire bonjour, je serais ravi d'avoir de vos nouvelles !
+          </p>
+        </div>
+        <div class="contact__content">
+          <div class="contact__social">
+            <div class="contact__links">
+              <a href="mailto:merickoken54@gmail.com@gmail.com" class="contact-link">
+                <div class="contact-link__icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </div>
+                <div class="contact-link__content">
+                  <span class="contact-link__label">Email</span>
+                  <span class="contact-link__value">merickoken54@gmail.com</span>
+                </div>
+              </a>
+              <a href="https://github.com/mericdev-design" target="_blank" rel="noreferrer" class="contact-link">
+                <div class="contact-link__icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                  </svg>
+                </div>
+                <div class="contact-link__content">
+                  <span class="contact-link__label">GitHub</span>
+                  <span class="contact-link__value">@mericdev-design</span>
+                </div>
+              </a>
+              <a href="https://www.linkedin.com/in/meric-koken-444b10281/" target="_blank" rel="noreferrer" class="contact-link">
+                <div class="contact-link__icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
+                </div>
+                <div class="contact-link__content">
+                  <span class="contact-link__label">LinkedIn</span>
+                  <span class="contact-link__value">MericKoken</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="contact__form">
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom complet" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="votre.email@example.com" required>
+              </div>
+              <div class="form-group">
+                <label for="subject">Sujet</label>
+                <input type="text" id="subject" name="subject" placeholder="Objet de votre message" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="captcha">Vérification anti-spam</label>
+                <div class="captcha-container">
+                  <div class="captcha-instruction">Recopiez les caractères ci-dessous :</div>
+                  <canvas id="captchaCanvas" width="200" height="60"></canvas>
+                  <input type="text" id="captchaAnswer" name="captcha_answer" placeholder="Tapez les caractères"
+                    required maxlength="6">
+                  <button type="button" id="refreshCaptcha" class="captcha-refresh" title="Nouveaux caractères">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="23 4 23 10 17 10"></polyline>
+                      <polyline points="1 20 1 14 7 14"></polyline>
+                      <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path>
+                    </svg>
+                  </button>
+                </div>
+                <div id="captchaError" class="captcha-error"></div>
+              </div>
+
+              <div class="form-group honeypot" style="display: none !important; visibility: hidden !important;">
+                <label for="website">Website (ne pas remplir)</label>
+                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+              </div>
+
+              <button type="submit" class="btn btn--primary">
+                <span>Envoyer le message</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22,2 15,22 11,13 2,9"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="currentYear"></span> Meric Koken</span>.</p>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="script.js" type="module"></script>
+</body>
+
+</html>
